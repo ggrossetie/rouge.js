@@ -1,6 +1,11 @@
 = Rouge.js
+// Aliases:
+:project-name: Rouge.js
 
 A JavaScript code highlighter that is compatible with pygments, cross-compiled from the Ruby library Rouge using Opal
+
+[caption=Status]
+CAUTION: {project-name} is currently _under development_ and not ready for use.
 
 == Build
 
