@@ -1,0 +1,4 @@
+= TODO
+
+* glob: undefined method `glob' for Dir
+** https://github.com/opal/opal/issues/1727

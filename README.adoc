@@ -1,0 +1,16 @@
+= Rouge.js
+
+A JavaScript code highlighter that is compatible with pygments, cross-compiled from the Ruby library Rouge using Opal
+
+== Build
+
+```
+npm install
+npm run build
+```
+
+== Test
+
+```
+node test.js
+```
