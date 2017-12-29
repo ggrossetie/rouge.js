@@ -134,7 +134,7 @@ Builder.prototype.compile = function (callback) {
   bfs.mkdirsSync('build');
 
   log.task('compile core lib');
-  new OpalCompiler({dynamicRequireLevel: 'ignore', defaultPaths: ['build/rouge/lib']})
+  new OpalCompiler({dynamicRequireLevel: 'ignore', defaultPaths: ['lib/rouge', 'build/rouge/lib']})
     .compile('rouge', 'build/rouge-lib.js');
 
   callback();

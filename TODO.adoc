@@ -1,4 +1,19 @@
 = TODO
 
-* glob: undefined method `glob' for Dir
-** https://github.com/opal/opal/issues/1727
+* You will need to use Opal in Ruby to compile Rouge to JavaScript:i
+
+```
+bundle install
+bundle exec ruby build.rb && cp rouge-lib.js build/
+```
+
+`node test.js` throws an exception:
+
+```
+Object freezing is not supported by Opal
+
+/home/guillaume/workspace/opensource/rouge.js/build/rouge-lib.js:2815
+        } catch ($returner) { if ($returner === Opal.returner) { return $returner.$v } throw $returner; }
+                                                                                       ^
+empty?: undefined method `empty?' for nil
+```

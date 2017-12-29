@@ -3,9 +3,10 @@ Opal = require('opal-runtime').Opal;
 Opal.require('nodejs');
 
 require('./build/rouge-lib.js');
-//Opal.require('rouge');
+Opal.require('rouge');
 
-//console.log(Opal.Rouge);
-//Prawn::Document.generate("hello.pdf") do
-//  text "Hello World!"
-//end
+const source = "cat builder.rb";
+
+const formatter = Opal.const_get_qualified(Opal.const_get_qualified(Opal.Rouge, 'Formatters'), 'HTML').$new();
+const lexer = Opal.const_get_qualified(Opal.const_get_qualified(Opal.Rouge, 'Lexers'), 'Shell').$new();
+console.log(formatter.$format(lexer.$lex(source)));

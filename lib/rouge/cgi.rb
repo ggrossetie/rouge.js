@@ -1,0 +1,3 @@
+module CGI
+  # noop
+end
