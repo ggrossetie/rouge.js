@@ -1,11 +1,11 @@
 {
   "name": "rouge.js",
-  "version": "3.1.0-preview.1",
+  "version": "1.0.0-beta.1",
   "description": "A JavaScript code highlighter that is compatible with pygments, cross-compiled from the Ruby library Rouge using Opal",
   "main": "dist/rouge.js",
   "engines": {
-    "node": ">=4",
-    "npm": ">=3.0.0"
+    "node": ">=8.11",
+    "npm": ">=5.0.0"
   },
   "files": [
     "dist/rouge.js",
@@ -13,7 +13,7 @@
     "README.adoc"
   ],
   "scripts": {
-    "build": "node npm/build.js"
+    "build": "node tasks/build.js"
   },
   "repository": {
     "type": "git",
@@ -39,12 +39,11 @@
     "opal-runtime": "1.0.13"
   },
   "devDependencies": {
-    "async": "^1.5.0",
-    "bestikk-download": "^0.1.0",
-    "bestikk-fs": "^0.1.0",
+    "bestikk-download": "1.0.0",
+    "bestikk-fs": "1.0.0",
     "bestikk-log": "0.1.0",
-    "bestikk-uglify": "0.1.1",
+    "bestikk-uglify": "3.0.0",
     "opal-compiler": "1.0.15",
-    "standard": "^14.3.1"
+    "standard": "14.3.1"
   }
 }

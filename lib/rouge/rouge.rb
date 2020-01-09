@@ -48,13 +48,13 @@ require('rouge/js')
 # Explicit require
 # REMIND: positive lookbehind (?<= ) are not supported by JavaScript's RegEx engine
 require('rouge/lexers/abap')
-# FIXME: SyntaxError: Invalid regular expression: /(?<=\n)(?=\s|/|<!--)/: Invalid group
+# FIXME: SyntaxError: Invalid regular expression: ... Invalid group
 require('rouge/lexers/actionscript')
 # REMIND: Use YAML module
 #require('rouge/lexers/apache')
 # REMIND: Based on Markdown module
 #require('rouge/lexers/apiblueprint')
-# FIXME: RegexpError: too short escape sequence: /(-|\*|\+|&|≠|>=?|<=?|=|≥|≤|\/
+# FIXME: RegexpError: too short escape sequence: ...
 require('rouge/lexers/apple_script')
 # FIXME: SyntaxError: unknown regexp options: awk')
 require('rouge/lexers/awk')
@@ -255,5 +255,3 @@ require('rouge/themes/tulip')
 require('rouge/themes/pastie')
 require('rouge/themes/bw')
 require('rouge/themes/magritte')
-
-Rouge::Lexer.enable_debug!

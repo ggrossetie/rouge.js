@@ -1,10 +1,12 @@
 = TODO
 
-* You will need to use Opal in Ruby to compile Rouge to JavaScript:i
+== Build
+
+You will need to use Opal in Ruby to compile Rouge to JavaScript:
 
 ```
 bundle install
-bundle exec ruby build.rb && cp rouge-lib.js build/
+bundle exec ruby build.rb
 ```
 
 `node test.js` throws an exception:
@@ -17,3 +19,23 @@ Object freezing is not supported by Opal
                                                                                        ^
 empty?: undefined method `empty?' for nil
 ```
+
+This issue is fixed in: https://github.com/opal/opal/pull/2061
+
+=== JavaScript
+
+```console
+$ npm run build
+Unable to compile { MissingRequire: can't find file: "thread" in:
+- /home/guillaume/workspace/opensource/opal
+- /home/guillaume/workspace/opensource/stdlib
+- /home/guillaume/workspace/opensource/rouge.js
+- /home/guillaume/workspace/opensource/rouge.js/node_modules/opal-runtime/src
+- /home/guillaume/workspace/opensource/rouge.js/node_modules/opal-compiler/src/stdlib
+- /home/guillaume/workspace/opensource/rouge.js/lib/rouge
+- /home/guillaume/workspace/opensource/rouge.js/lib
+- /home/guillaume/workspace/opensource/rouge.js/build/rouge/lib
+- /home/guillaume/workspace/opensource/rouge.js/build/rouge/lib/rouge
+```
+
+The `thread` class is not included in the `opal-compiler` module: https://github.com/Mogztter/opal-node-compiler/issues/11
