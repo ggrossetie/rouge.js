@@ -6,5 +6,6 @@ Gem::Specification.new do |s|
   s.summary = 'A JavaScript code highlighter that is compatible with pygments, cross-compiled from the Ruby library Rouge using Opal'
   s.authors = ['Guillaume Grossetie']
   s.license = 'MIT'
-  s.add_development_dependency 'opal'
+  s.add_development_dependency 'opal', '~> 1.0'
+  s.add_development_dependency 'rouge', '~> 3.14'
 end

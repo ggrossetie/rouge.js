@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*- #
+# frozen_string_literal: true
 
 # stdlib
 require 'pathname'
@@ -34,9 +35,7 @@ module Rouge
 end
 
 require('rouge/version')
-
 require('rouge/util')
-
 require('rouge/text_analyzer')
 require('rouge/token')
 
@@ -146,7 +145,8 @@ require('rouge/lexers/nginx')
 require('rouge/lexers/nim')
 require('rouge/lexers/nix')
 require('rouge/lexers/objective_c')
-require('rouge/lexers/ocaml')
+# OCamlCommon: uninitialized constant Rouge::Lexers::OCamlCommon
+#require('rouge/lexers/ocaml')
 require('rouge/lexers/pascal')
 require('rouge/lexers/perl')
 
@@ -234,11 +234,14 @@ require('rouge/formatters/html_table')
 require('rouge/formatters/html_pygments')
 require('rouge/formatters/html_legacy')
 require('rouge/formatters/html_linewise')
+require('rouge/formatters/html_line_table')
 require('rouge/formatters/html_inline')
 require('rouge/formatters/terminal256')
+require('rouge/formatters/tex')
 require('rouge/formatters/null')
 
 require('rouge/theme')
+require('rouge/tex_theme_renderer')
 require('rouge/themes/thankful_eyes')
 require('rouge/themes/colorful')
 require('rouge/themes/base16')
@@ -249,3 +252,8 @@ require('rouge/themes/molokai')
 require('rouge/themes/monokai_sublime')
 require('rouge/themes/gruvbox')
 require('rouge/themes/tulip')
+require('rouge/themes/pastie')
+require('rouge/themes/bw')
+require('rouge/themes/magritte')
+
+Rouge::Lexer.enable_debug!

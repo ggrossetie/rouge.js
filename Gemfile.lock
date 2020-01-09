@@ -6,23 +6,21 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    ast (2.3.0)
-    hike (1.2.3)
-    opal (0.11.0)
+    ast (2.4.0)
+    opal (1.0.2)
       ast (>= 2.3.0)
-      hike (~> 1.2)
-      parser (= 2.3.3.1)
-      sourcemap (~> 0.1.0)
-    parser (2.3.3.1)
-      ast (~> 2.2)
-    sourcemap (0.1.1)
+      parser (~> 2.6)
+    parser (2.7.0.2)
+      ast (~> 2.4.0)
+    rouge (3.14.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  opal
+  opal (~> 1.0)
+  rouge (~> 3.14)
   rouge.js!
 
 BUNDLED WITH
-   1.16.1
+   1.17.2
